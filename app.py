@@ -15,6 +15,8 @@ db = SQLAlchemy(app)
 class Grocery(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
+    qty = db.Column(db.Integer, nullable=True)
+    unit = db.Column(db.String(20), nullable=True)
     created_at = db.Column(db.DateTime, nullable=False,
                            default=datetime.utcnow)
     def __repr__(self):
