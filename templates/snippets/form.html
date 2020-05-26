@@ -1,13 +1,20 @@
 <form action="/" method="POST">
-    <div class="form-row">
-      <div class="col-sm-10 my-1">
-        <label for="newStuff" class="sr-only">New Stuff:</label>
-        <input type="text" class="form-control" name="name" id="newStuff" placeholder="Enter new item">
-        <input type="text" class="form-control" name="qty" id="qty" placeholder="Enter quantity">
-        <input type="text" class="form-control" name="unit" id="unit" placeholder="Enter unit">
-      </div>
-      <div class="col-sm-2 my-1">
-        <button type="submit" class="btn btn-primary btn-block">Add</button>
-      </div>
-    </div>
+    <table class="table" border="1">
+       <thead>
+          <tr>
+              <th>Items</th>
+              <th>Quantity</th>
+              <th>Unit</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><input type="text" class="form-control" name="name" id="newStuff" placeholder="Enter new item"></td>
+              <td><input type="text" class="form-control" name="qty" id="qty" placeholder="Enter quantity"></td>
+              <td><input type="text" class="form-control" name="unit" id="unit" placeholder="Enter unit"></td>
+              <td><button type="submit" class="btn btn-primary btn-block">Add</button></td>
+          </tr>
+      </tbody>
+  </table>
   </form>

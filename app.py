@@ -28,7 +28,9 @@ class Grocery(db.Model):
 def index():
     if request.method == 'POST':
         name = request.form['name']
-        new_stuff = Grocery(name=name)
+        qty = request.form['qty']
+        unit = request.form['unit']
+        new_stuff = Grocery(name=name, qty=qty, unit=unit)
         try:
             db.session.add(new_stuff)
             db.session.commit()
@@ -47,7 +49,8 @@ def update(id):
 
     if request.method == 'POST':
         grocery.name = request.form["name"]
-
+        grocery.qty = request.form["qty"]
+        grocery.unit = request.form["unit"]
         try:
             db.session.commit()
             return redirect("/")

@@ -9,7 +9,9 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Groceries</th>
+                <th>Items</th>
+                <th>Quantity</th>
+                <th>Unit</th>
                 <th>Added</th>
                 <th></th>
             </tr>
@@ -18,6 +20,8 @@
             {% for grocery in groceries %}
             <tr>
                 <td><a href="/update/{{ grocery.id }}">{{grocery.name}}</a></td>
+                <td>{{grocery.qty}}</td>
+                <td>{{grocery.unit}}</td>
                 <td>{{grocery.created_at.date()}}</td>
                 <td class="text-right"><a class="btn btn-danger btn-sm" href="/delete/{{ grocery.id }}" role="button">Delete</a></td>
             </tr>
